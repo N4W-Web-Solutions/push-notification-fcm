@@ -19,9 +19,11 @@ headers: {
 ```
 Para configuração de "para quem irá enviar", na função "getNotificationData" dentro do arquivo notification.js, escolha como será o parâmetro "to": unitário (token do usuário) ou para um tópico (/topic/tokec_name), onde todos que estiverem cadastrados no tópico, receberão a mensagem:
 ```javascript
-headers: {
-  Authorization: "key=<CHAVE_SERVIDOR>"
-}
+    to: txtToken.val()
+
+    OU
+    
+    to: `/topics/${TOPIC_NAME}`
 ```
 
 ## Execução
